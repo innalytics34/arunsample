@@ -260,6 +260,6 @@ async def get_employeereport(data: str = {"task_type" : "0"}, decoded=Depends(au
 
 
 
-if __name__ == "__main__":
-    run(app, host="0.0.0.0", port=805)
+# if __name__ == "__main__":
+#     run(app, host="0.0.0.0", port=805)
 
