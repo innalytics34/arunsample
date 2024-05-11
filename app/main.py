@@ -24,7 +24,7 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"message": "success"}
+    return {"message": "success1"}
 
 
 @app.post("/IEC/login")

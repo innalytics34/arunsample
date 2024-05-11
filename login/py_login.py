@@ -49,7 +49,7 @@ def fn_login(request):
             return {"message": "Username or password is incorrect", "rval": 0, "data": [],  "token": ""}
     except Exception as e:
         print(str(e))
-        return {"message": "Something went wrong", "rval": 0}
+        return {"message": "Something went wrong", "rval": 0, 'error': str(e)}
 
 
 def pad(data):
