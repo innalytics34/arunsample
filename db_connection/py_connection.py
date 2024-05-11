@@ -8,8 +8,13 @@ load_dotenv(env_path)
 
 def get_mssql_connection():
     try:
-        conn = pyodbc.connect('DRIVER={' + os.getenv("DRIVER") + '};SERVER=' + os.getenv("HOST") + ';DATABASE=' + os.getenv("DB") + ';UID=' + os.getenv("USER") +';PWD=' + os.getenv(
-            "PASSWORD") + '')
+        DRIVER = 'SQL Server'
+        HOST = 'innalytics.database.windows.net'
+        USER = 'AppUser2'
+        PASSWORD = 'Iec@420#1234'
+        DB = 'COREDB'
+        conn = pyodbc.connect(
+            'DRIVER={' + DRIVER + '};SERVER=' + HOST + ';DATABASE=' + DB + ';UID=' + USER + ';PWD=' + PASSWORD)
         return conn
     except Exception as e:
         print("get_mssql_connection " + str(e))
